@@ -73,7 +73,8 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 |------------|-----------------------------|
 | React 18   | UI library                  |
 | Vite 5     | Dev server & build tool     |
-| Plain CSS  | Styles — one file/component |
+| Plain CSS 
++ tailwind CSS  | Styles — one file/component |
 | Google Fonts (Barlow Condensed) | Display font |
 
 ---
