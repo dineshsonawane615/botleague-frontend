@@ -1,0 +1,243 @@
+.join {
+  background: #1a1a1a;
+  padding: 40px 0;
+  /* border: 2px solid #7c3aed; */
+  position: relative;
+}
+
+.join__inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.join__heading {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+/* ── 3 sign-up forms ── */
+.join__forms {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.join__form-card {
+  background: #111111;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.join__form-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.join__input {
+  display: block;
+  width: 100%;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  padding: 7px 10px;
+  color: #ffffff;
+  font-size: 12px;
+  margin-bottom: 8px;
+  transition: border-color 0.2s;
+  font-family: 'Barlow', sans-serif;
+}
+
+.join__input::placeholder {
+  color: #555555;
+}
+
+.join__input:focus {
+  outline: none;
+  border-color: #ef4444;
+}
+
+.join__signup-btn {
+  width: 100%;
+  background: #ef4444;
+  border: none;
+  color: #ffffff;
+  padding: 9px 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin-top: 4px;
+  transition: background 0.2s;
+}
+
+.join__signup-btn:hover {
+  background: #dc2626;
+}
+
+/* ── Sponsors ── */
+.join__sponsors {
+  margin-bottom: 32px;
+}
+
+.join__sponsors-heading {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.join__sponsors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.sponsor-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sponsor-item__logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #888888;
+  flex-shrink: 0;
+}
+
+.sponsor-item__name {
+  color: #cccccc;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ─── FOOTER ─── */
+.footer {
+  border-top: 1px solid #2a2a2a;
+  padding-top: 24px;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 24px;
+}
+
+.footer__links-heading,
+.footer__social-heading {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.footer__links-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 24px;
+}
+
+.footer__link {
+  color: #666666;
+  font-size: 12px;
+  transition: color 0.2s;
+}
+
+.footer__link:hover {
+  color: #aaaaaa;
+}
+
+.footer__social {
+  text-align: right;
+}
+
+.footer__social-icons {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.footer__social-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaaaaa;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.footer__social-icon:hover {
+  color: #ffffff;
+  border-color: #555555;
+}
+
+.footer__social-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.footer__copy {
+  text-align: center;
+  color: #333333;
+  font-size: 11px;
+  border-top: 1px solid #222222;
+  padding-top: 16px;
+  margin-top: 8px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .join__forms {
+    grid-template-columns: 1fr;
+  }
+
+  .join__sponsors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__social {
+    text-align: left;
+  }
+
+  .footer__social-icons {
+    justify-content: flex-start;
+  }
+}

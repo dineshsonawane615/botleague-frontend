@@ -1,0 +1,154 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #1a1a1a;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.navbar__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  height: 100%; 
+}
+
+.navbar__logo-img {
+  height: 32px;        
+  width: auto;         
+  object-fit: contain; 
+}
+
+
+/* ── Nav links ── */
+.navbar__links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.navbar__link {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #aaaaaa;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.navbar__link:hover {
+  color: #ffffff;
+}
+
+.navbar__link--active {
+  color: #ffffff;
+  border-bottom-color: #ef4444;
+}
+
+/* ── Auth buttons ── */
+.navbar__auth {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.navbar__btn-login {
+  background: transparent;
+  border: 1px solid #555555;
+  color: #ffffff;
+  padding: 5px 18px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: border-color 0.2s;
+}
+
+.navbar__btn-login:hover {
+  border-color: #ffffff;
+}
+
+.navbar__btn-register {
+  background: #ef4444;
+  border: none;
+  color: #ffffff;
+  padding: 5px 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: background 0.2s;
+}
+
+.navbar__btn-register:hover {
+  background: #dc2626;
+}
+
+/* ── Mobile toggle ── */
+.navbar__mobile-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 22px;
+}
+
+/* ── Mobile menu ── */
+.navbar__mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #1a1a1a;
+  border-top: 1px solid #2a2a2a;
+  padding: 16px;
+  gap: 14px;
+}
+
+.navbar__mobile-menu.open {
+  display: flex;
+}
+
+.navbar__mobile-link {
+  font-size: 14px;
+  color: #aaaaaa;
+  font-weight: 600;
+}
+
+.navbar__mobile-link:hover {
+  color: #ffffff;
+}
+
+.navbar__mobile-auth {
+  display: flex;
+  gap: 10px;
+  padding-top: 8px;
+}
+
+.navbar__mobile-auth .navbar__btn-login,
+.navbar__mobile-auth .navbar__btn-register {
+  flex: 1;
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+  .navbar__links,
+  .navbar__auth {
+    display: none;
+  }
+
+  .navbar__mobile-toggle {
+    display: block;
+  }
+}

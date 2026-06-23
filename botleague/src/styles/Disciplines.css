@@ -1,0 +1,95 @@
+.disciplines {
+  background: #0a0a0a;
+  padding: 80px 0;
+  border-top: 1px solid #141414;
+
+  background-image: url(/public/circuit.png);
+  background-size: 10px auto;
+  padding: 80px 0px;
+}
+
+.disciplines__inner {
+  max-width: 1200px; /* Wide-screen layout match */
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.disciplines__eyebrow {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #ef4444;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.disciplines__heading {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 40px;
+}
+
+/* ── Layout Rows ── */
+.disciplines__top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.disciplines__bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* ── Universal Structural Card Rules ── */
+.discipline-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #222222;
+  aspect-ratio: 16 / 11;
+  background-size: cover;
+  background-position: center 10%;
+  background-repeat: no-repeat;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s ease;
+}
+
+.discipline-card:hover {
+  transform: translateY(-5px);
+  border-color: #ef4444;
+}
+
+/* Photo Text Background Shade protection layer */
+.discipline-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 15%, rgba(0, 0, 0, 0.2) 70%);
+  z-index: 1;
+}
+
+.discipline-card__label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  z-index: 2;
+}
+
+.discipline-card__name {
+  color: #ffffff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: pre-line;
+  line-height: 1.1;
+}
